@@ -1,5 +1,7 @@
 package elements;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.Objects;
 
 import static java.lang.Math.pow;
@@ -8,6 +10,7 @@ import static java.lang.Math.sqrt;
 public class ComplexNumber {
     private double realUnit;
     private double imagineUnit;
+    private NumberFormat numberFormat = new DecimalFormat("##.####");
 
     public ComplexNumber(double realUnit, double imagineUnit) {
         this.realUnit = realUnit;
@@ -52,7 +55,19 @@ public class ComplexNumber {
 
     @Override
     public String toString() {
-        return realUnit + " + " + imagineUnit + "i";
+        if(realUnit != 0 && imagineUnit != 0) {
+            return numberFormat.format(realUnit) + getSeparator(imagineUnit) + numberFormat.format(imagineUnit) + "i";
+        } else if(realUnit == 0) {
+            return numberFormat.format(imagineUnit) + "i";
+        } else if(imagineUnit == 0) {
+            return numberFormat.format(realUnit);
+        } else {
+            return "0";
+        }
+    }
+
+    private String getSeparator(double imagineUnit) {
+        return imagineUnit > 0 ? "+" : "";
     }
 
     public ComplexNumber subtract(ComplexNumber number) {
