@@ -20,6 +20,22 @@ public class ComplexNumber {
         return new ComplexNumber(realUnit, imagineUnit);
     }
 
+    public double getRealUnit() {
+        return realUnit;
+    }
+
+    public void setRealUnit(double realUnit) {
+        this.realUnit = realUnit;
+    }
+
+    public double getImagineUnit() {
+        return imagineUnit;
+    }
+
+    public void setImagineUnit(double imagineUnit) {
+        this.imagineUnit = imagineUnit;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

@@ -10,19 +10,6 @@ public class Main {
 
     public static void main(String[] args) {
 
-
-//        ComplexNumber addResult = firstNumber.add(secondNumber);
-//        System.out.println(addResult);
-
-//        ComplexNumber subtractResult = firstNumber.subtract(secondNumber);
-//        System.out.println(subtractResult);
-
-//        ComplexNumber multiplyResult = firstNumber.multiply(secondNumber);
-//        System.out.println(multiplyResult);
-
-//        ComplexNumber divisionResult = firstNumber.divide(secondNumber);
-//        System.out.println(divisionResult);
-
 //        ComplexNumber moduleResult = firstNumber.module();
 //        System.out.println(moduleResult);
 
