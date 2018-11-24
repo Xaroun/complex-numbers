@@ -2,16 +2,11 @@ import elements.ComplexNumber;
 import elements.Vector;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
 
 public class Main {
 
     public static void main(String[] args) {
-
-//        ComplexNumber moduleResult = firstNumber.module();
-//        System.out.println(moduleResult);
 
         ComplexNumber firstNumber = new ComplexNumber(1, 2);
         ComplexNumber secondNumber = new ComplexNumber(3, -4);
@@ -27,17 +22,7 @@ public class Main {
         v.add(thirdNumber);
         v.add(fourthNumber);
 
-//        List<ComplexNumber> complexNumbers = Vector.addition(w, v);
-//        System.out.println(complexNumbers);
-
-//        List<ComplexNumber> complexNumbers2 = Vector.subtraction(w, v);
-//        System.out.println(complexNumbers2);
-
-//        List<ComplexNumber> complexNumbers3 = Vector.scalarMultiply(v, new ComplexNumber(1, 1));
-//        System.out.println(complexNumbers3);
-
-        ComplexNumber complexNumbers4 = Vector.multiply(v, w);
-        System.out.println(complexNumbers4);
-
+        ComplexNumber multipliedVectors = Vector.multiply(w, v);
+        System.out.println(multipliedVectors);
     }
 }
