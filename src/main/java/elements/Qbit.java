@@ -11,9 +11,12 @@ public class Qbit {
     public Qbit(ComplexNumber zeroProb, ComplexNumber oneProb) {
         this.zeroProb = zeroProb;
         this.oneProb = oneProb;
+        if (!validateQbit()) {
+            throw new IllegalArgumentException("INVALID QBIT");
+        }
     }
 
-    public boolean validateQbit() {
+    private boolean validateQbit() {
         ComplexNumber alphaModule = zeroProb.multiply(zeroProb).module();
         ComplexNumber betaModule = oneProb.multiply(oneProb).module();
         return alphaModule.add(betaModule).equals(new ComplexNumber(1, 0));
