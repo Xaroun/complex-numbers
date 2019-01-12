@@ -1,4 +1,5 @@
 import elements.ComplexNumber;
+import elements.Qbit;
 import elements.Vector;
 
 import java.util.ArrayList;
@@ -51,5 +52,8 @@ public class Main {
         //Mnożenie wielomianów
         System.out.println("Mnożenie wielomianu: " + v + " oraz " + w + " = " + Vector.multiply(v, w));
 
+        Qbit qbit = new Qbit(new ComplexNumber(1, 0), new ComplexNumber(0, 0));
+        System.out.println("Walidacja: " + qbit.validateQbit());
+        System.out.println(qbit.toString());
     }
 }
